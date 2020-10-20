@@ -47,7 +47,19 @@ def greet_person():
     greeting = request.args.get('greeting')
     # compliment = choice(AWESOMENESS)
 
-    return render_template('greet.html')
+    return f"""
+    <!doctype html>
+    <html>
+      <body>
+        Hi, {player}! I think you're {greeting}!
+      </body>
+    </html>
+    """
+    
+    
+    
+    
+    # render_template('greet.html')
 
 
 if __name__ == '__main__':
